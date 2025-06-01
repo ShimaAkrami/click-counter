@@ -11,20 +11,26 @@
 
 </head>
 
-<body>
-    <button class="dark-toggle-btn" >
-  تغییر حالت شب/روز
-</button>
+<body class="center-page" >
 
 
-    <button class="btn">کلیک کن</button>
 
+    <button class="dark-toggle-btn">
+        تغییر حالت شب/روز
+    </button>
 
     <div class="counter-card">
-        <div>
+
+        <div class="header">
             <h2>تعداد کلیک ها</h2>
+            <p id="count">0</p>
         </div>
-        
+        <div class="btns">
+            <button class="state-btns " id="increment"> افزایش</button>
+            <button class="state-btns" id="decrement">کاهش </button>
+            <button class="state-btns" id="reset"> ریست</button>
+        </div>
+
 
 
     </div>

@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-/*این باعث می‌شه همه مرورگرها استایل پایه رو یکسان نمایش بدن.*/
+  /*این باعث می‌شه همه مرورگرها استایل پایه رو یکسان نمایش بدن.*/
 }
 
 .center-page {
@@ -53,7 +53,7 @@ body.dark .card {
 
 .dark-toggle-btn:hover {
   background-color: #0d47a1;
-   /*دکمه حالت شب هاورش*/
+  /*دکمه حالت شب هاورش*/
 }
 
 body.dark .text-box p {
@@ -63,13 +63,47 @@ body.dark .text-box p {
 body.dark .btn {
   background-color: #333;
   color: #f5f5f5;
-   /*حالت دارک مود روی المان ها*/
+  /*حالت دارک مود روی المان ها*/
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
   margin: 0;
   padding: 0;
   font-family: "Vazirmatn", Tahoma, sans-serif;
   background-color: #f4f4f4;
   /*همیشه بادی اینو بده  */
+}
+.counter-card {
+  width: 50%;
+  height: 50%;
+  padding: 10px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0 8px 15px grey;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+.state-btns{
+margin-left: 20px;
+padding: 15px;
+border:1px solid rgba(135, 133, 93, 0.485);
+border-radius: 8px;
+
+}
+h2{
+  margin-bottom:30px;
 }
