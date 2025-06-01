@@ -2,7 +2,7 @@ console.log("started my project...");
 
 const toggleBtn = document.querySelector(".dark-toggle-btn");
 
-if (localStorage.getItem("darkMode" === "enabled")) {
+if (localStorage.getItem("darkMode") === "enabled") {
   document.body.classList.add("dark");
 }
 toggleBtn.addEventListener("click", () => {
@@ -12,4 +12,30 @@ toggleBtn.addEventListener("click", () => {
   } else {
     localStorage.setItem("darkMode", "disabled");
   }
+});
+
+const count = document.getElementById("count");
+
+const increaseBtn = document.getElementById("increment");
+
+const decreaseBtn = document.getElementById("decrement");
+
+const resetBtn = document.getElementById("reset");
+
+let countget = parseInt(count.textContent);
+localStorage.getItem('clickCount')
+increaseBtn.addEventListener("click", () => {
+  
+  countget = countget + 1;
+  count.textContent = countget;
+});
+
+decreaseBtn.addEventListener("click", () => {
+  countget = countget - 1;
+  count.textContent = countget;
+});
+
+resetBtn.addEventListener("click", () => {
+  countget = 0;
+  count.textContent = countget;
 });
