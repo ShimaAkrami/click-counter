@@ -16,26 +16,40 @@ toggleBtn.addEventListener("click", () => {
 
 const count = document.getElementById("count");
 
+let countget = parseInt(count.textContent);
+
 const increaseBtn = document.getElementById("increment");
 
 const decreaseBtn = document.getElementById("decrement");
 
 const resetBtn = document.getElementById("reset");
 
-let countget = parseInt(count.textContent);
-localStorage.getItem('clickCount')
+let savedCount = localStorage.getItem("clickCount");
+
+if (savedCount !== null) {
+ countget=parseInt(savedCount);
+} else {
+  countget = 0;
+}
+count.textContent=countget;
+
 increaseBtn.addEventListener("click", () => {
-  
   countget = countget + 1;
   count.textContent = countget;
+
+  localStorage.setItem("clickCount", countget);
 });
 
 decreaseBtn.addEventListener("click", () => {
   countget = countget - 1;
   count.textContent = countget;
+
+  localStorage.setItem("clickCount", countget);
 });
 
 resetBtn.addEventListener("click", () => {
   countget = 0;
   count.textContent = countget;
+
+  localStorage.setItem("clickCount", countget);
 });
